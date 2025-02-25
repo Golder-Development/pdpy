@@ -9,6 +9,7 @@ from . import utils
 
 # Functions -------------------------------------------------------------------
 
+
 def combine_party_memberships(pm):
 
     """Combine consecutive records in a dataframe of party memberships.

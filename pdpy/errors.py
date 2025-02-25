@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Package errors."""
 
+
 class Error(Exception):
 
     """Base class for exceptions in this module."""

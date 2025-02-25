@@ -8,6 +8,7 @@ from . import core
 
 # Raw Members queries ---------------------------------------------------------
 
+
 def fetch_members_raw(house=None):
 
     """Fetch key details for Members."""

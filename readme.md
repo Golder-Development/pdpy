@@ -82,7 +82,7 @@ The Members API provides access to data on Members of both Houses of Parliament.
 
 Each of these Member functions can take optional arguments for a `from_date` and a `to_date`, which can be used to filter the rows returned based on a period of activity related to each row. The `on_date` argument is a convenience that sets the `from_date` and `to_date` to the same given date. The `on_date` has priority: if the `on_date` is set, the `from_date` and `to_date` are ignored. The values for these arguments can be either a _datetime.date_ or a string specifying a date in ISO 8601 format ('YYYY-MM-DD').
 
-The filtering performed using these arguments is inclusive: a row is returned if any part of the activity in question falls within the period specified with the from and to dates. If the activity in question has not yet ended, the end date will have a value of NumPy.NaN.
+The filtering performed using these arguments is inclusive: a row is returned if any part of the activity in question falls within the period specified with the from and to dates. If the activity in question has not yet ended, the end date will have a value of NumPy.nan.
 
 ---
 

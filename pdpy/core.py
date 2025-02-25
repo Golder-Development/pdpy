@@ -15,6 +15,7 @@ from . import settings
 
 # Functions  ------------------------------------------------------------------
 
+
 def request(query):
 
     """Send an http request with a query and return the response.
@@ -91,11 +92,11 @@ def sparql_select(query):
 
                     row.append(
                         datetime.datetime.strptime(
-                        record[header]['value'], '%Y-%m-%d+%H:%M').date())
+                            record[header]['value'], '%Y-%m-%d+%H:%M').date())
                 else:
                     row.append(record[header]['value'].strip())
             else:
                 row.append(None)
         rows.append(row)
 
-    return pd.DataFrame(data=rows, columns=headers).fillna(value=np.NaN)
+    return pd.DataFrame(data=rows, columns=headers).fillna(value=np.nan)

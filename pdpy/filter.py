@@ -11,11 +11,12 @@ from . import errors
 
 # Filter dates ----------------------------------------------------------------
 
+
 def filter_dates(df,
                  start_col,
                  end_col,
-                 from_date=np.NaN,
-                 to_date=np.NaN):
+                 from_date=np.nan,
+                 to_date=np.nan):
 
     """Filter a dataframe of data based on the given from and to dates.
 
@@ -36,15 +37,15 @@ def filter_dates(df,
         The name of the column that contains the start date for the activity.
     end_col : str
         The name of the column that contains the end date for the activity.
-    from_date : str or date or NaN, optional
+    from_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is numpy.NaN, which means no records are excluded on the
+        default value is numpy.nan, which means no records are excluded on the
         basis of the from_date.
-    to_date : str or date or NaN, optional
+    to_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is np.NaN, which means no records are excluded on the
+        default value is np.nan, which means no records are excluded on the
         basis of the to_date.
 
     Returns
@@ -99,7 +100,7 @@ def handle_date(d):
     """Take a date which may be a string or a date and returns a date.
 
     handle_date takes a date which may be a datetime.date or an ISO 8601 date
-    string, checks it is valid, and returns the date as a datetime.date. NaN
+    string, checks it is valid, and returns the date as a datetime.date. nan
     values are returned unmodified. This function raises a DateFromatError if
     it is unable to handle the date.
 
@@ -119,6 +120,7 @@ def handle_date(d):
             '{0} is not a valid datetime.date or date string'.format(d))
 
 # Filter memberships ----------------------------------------------------------
+
 
 def filter_memberships(tm,
                        fm,

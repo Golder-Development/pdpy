@@ -31,37 +31,37 @@ def convert_date_series(date_str_series):
 
     """Convert a series of ISO 8601 date strings to datetime.dates."""
 
-    return [np.NaN if pd.isna(d) \
+    return [np.nan if pd.isna(d) \
         else datetime.datetime.strptime(d, '%Y-%m-%d').date() \
         for d in date_str_series]
 
 
 def min_date_nan(dates):
 
-    """Find the earliest date from a series that may contain NaNs.
+    """Find the earliest date from a series that may contain nans.
 
     Find the earliest date from a pandas series of datetime.dates that may
-    contain NaNs. NaN dates are considered earlier than all others.
+    contain nans. nan dates are considered earlier than all others.
 
     """
 
     if dates.isna().any():
-        return np.NaN
+        return np.nan
     else:
         return min(dates)
 
 
 def max_date_nan(dates):
 
-    """Find the latest date from a series that may contain NaNs.
+    """Find the latest date from a series that may contain nans.
 
     Find the latest date from a pandas series of datetime.dates that may
-    contain NaNs. NaN dates are considered later than all others.
+    contain nans. nan dates are considered later than all others.
 
     """
 
     if dates.isna().any():
-        return np.NaN
+        return np.nan
     else:
         return max(dates)
 

@@ -12,6 +12,7 @@ from . import utils
 
 # Functions ------------------------------------------------
 
+
 def get_general_elections():
 
     """Return the dates of UK general elections stme 1929 as a DataFrame.

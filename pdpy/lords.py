@@ -89,9 +89,9 @@ def fetch_lords_committee_memberships_raw():
 
 # Main Lords API --------------------------------------------------------------
 
-def fetch_lords(from_date=np.NaN,
-                to_date=np.NaN,
-                on_date=np.NaN):
+def fetch_lords(from_date=np.nan,
+                to_date=np.nan,
+                on_date=np.nan):
 
     """Fetch key details for all Lords.
 
@@ -111,20 +111,20 @@ def fetch_lords(from_date=np.NaN,
     Parameters
     ----------
 
-    from_date : str or date or NaN, optional
+    from_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is numpy.NaN, which means no records are excluded on the
+        default value is numpy.nan, which means no records are excluded on the
         basis of the from_date.
-    to_date : str or date or NaN, optional
+    to_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is np.NaN, which means no records are excluded on the
+        default value is np.nan, which means no records are excluded on the
         basis of the to_date.
-    on_date : str or date or NaN, optional
+    on_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is np.NaN, which means no records are excluded on the
+        default value is np.nan, which means no records are excluded on the
         basis of the on_date.
 
     Returns
@@ -162,9 +162,9 @@ def fetch_lords(from_date=np.NaN,
     return lords
 
 
-def fetch_lords_memberships(from_date=np.NaN,
-                            to_date=np.NaN,
-                            on_date=np.NaN):
+def fetch_lords_memberships(from_date=np.nan,
+                            to_date=np.nan,
+                            on_date=np.nan):
 
     """Fetch Lords memberships for all Lords.
 
@@ -179,25 +179,25 @@ def fetch_lords_memberships(from_date=np.NaN,
     The filtering is inclusive: a membership is returned if any part of it
     falls within the period specified with the from and to dates.
 
-    Note that a membership with a NaN end date is still open.
+    Note that a membership with a nan end date is still open.
 
     Parameters
     ----------
 
-    from_date : str or date or NaN, optional
+    from_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is numpy.NaN, which means no records are excluded on the
+        default value is numpy.nan, which means no records are excluded on the
         basis of the from_date.
-    to_date : str or date or NaN, optional
+    to_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is np.NaN, which means no records are excluded on the
+        default value is np.nan, which means no records are excluded on the
         basis of the to_date.
-    on_date : str or date or NaN, optional
+    on_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is np.NaN, which means no records are excluded on the
+        default value is np.nan, which means no records are excluded on the
         basis of the on_date.
 
     Returns
@@ -233,9 +233,9 @@ def fetch_lords_memberships(from_date=np.NaN,
     return lords_memberships
 
 
-def fetch_lords_party_memberships(from_date=np.NaN,
-                                  to_date=np.NaN,
-                                  on_date=np.NaN,
+def fetch_lords_party_memberships(from_date=np.nan,
+                                  to_date=np.nan,
+                                  on_date=np.nan,
                                   while_lord=True,
                                   collapse=False):
 
@@ -261,25 +261,25 @@ def fetch_lords_party_memberships(from_date=np.NaN,
     membership ids from the data platform are not included in the dataframe
     returned.
 
-    Note that a membership with a NaN end date is still open.
+    Note that a membership with a nan end date is still open.
 
     Parameters
     ----------
 
-    from_date : str or date or NaN, optional
+    from_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is numpy.NaN, which means no records are excluded on the
+        default value is numpy.nan, which means no records are excluded on the
         basis of the from_date.
-    to_date : str or date or NaN, optional
+    to_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is np.NaN, which means no records are excluded on the
+        default value is np.nan, which means no records are excluded on the
         basis of the to_date.
-    on_date : str or date or NaN, optional
+    on_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is np.NaN, which means no records are excluded on the
+        default value is np.nan, which means no records are excluded on the
         basis of the on_date.
     while_lord : bool, optional
         A boolean indicating whether to filter the party memberships to include
@@ -297,7 +297,7 @@ def fetch_lords_party_memberships(from_date=np.NaN,
         A pandas dataframe of party memberships for each Lord, with one row per
         party membership. The memberships are processed and merged so that
         there is only one party membership for a period of continuous
-        membership within the same party. A membership with a NaN end date is
+        membership within the same party. A membership with a nan end date is
         still open.
 
     """
@@ -346,9 +346,9 @@ def fetch_lords_party_memberships(from_date=np.NaN,
     return party_memberships
 
 
-def fetch_lords_government_roles(from_date=np.NaN,
-                                 to_date=np.NaN,
-                                 on_date=np.NaN,
+def fetch_lords_government_roles(from_date=np.nan,
+                                 to_date=np.nan,
+                                 on_date=np.nan,
                                  while_lord=True):
 
     """Fetch government roles for all Lords.
@@ -367,25 +367,25 @@ def fetch_lords_government_roles(from_date=np.NaN,
     The filtering is inclusive: a role is returned if any part of it falls
     within the period specified with the from and to dates.
 
-    Note that a role with a NaN end date is still open.
+    Note that a role with a nan end date is still open.
 
     Parameters
     ----------
 
-    from_date : str or date or NaN, optional
+    from_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is numpy.NaN, which means no records are excluded on the
+        default value is numpy.nan, which means no records are excluded on the
         basis of the from_date.
-    to_date : str or date or NaN, optional
+    to_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is np.NaN, which means no records are excluded on the
+        default value is np.nan, which means no records are excluded on the
         basis of the to_date.
-    on_date : str or date or NaN, optional
+    on_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is np.NaN, which means no records are excluded on the
+        default value is np.nan, which means no records are excluded on the
         basis of the on_date.
     while_lord : bool, optional
         A boolean indicating whether to filter the government roles to include
@@ -438,9 +438,9 @@ def fetch_lords_government_roles(from_date=np.NaN,
     return government_roles
 
 
-def fetch_lords_opposition_roles(from_date=np.NaN,
-                                 to_date=np.NaN,
-                                 on_date=np.NaN,
+def fetch_lords_opposition_roles(from_date=np.nan,
+                                 to_date=np.nan,
+                                 on_date=np.nan,
                                  while_lord=True):
 
     """Fetch opposition roles for all Lords.
@@ -459,25 +459,25 @@ def fetch_lords_opposition_roles(from_date=np.NaN,
     The filtering is inclusive: a role is returned if any part of it falls
     within the period specified with the from and to dates.
 
-    Note that a role with a NaN end date is still open.
+    Note that a role with a nan end date is still open.
 
     Parameters
     ----------
 
-    from_date : str or date or NaN, optional
+    from_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is numpy.NaN, which means no records are excluded on the
+        default value is numpy.nan, which means no records are excluded on the
         basis of the from_date.
-    to_date : str or date or NaN, optional
+    to_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is np.NaN, which means no records are excluded on the
+        default value is np.nan, which means no records are excluded on the
         basis of the to_date.
-    on_date : str or date or NaN, optional
+    on_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is np.NaN, which means no records are excluded on the
+        default value is np.nan, which means no records are excluded on the
         basis of the on_date.
     while_lord : bool, optional
         A boolean indicating whether to filter the opposition roles to include
@@ -530,9 +530,9 @@ def fetch_lords_opposition_roles(from_date=np.NaN,
     return opposition_roles
 
 
-def fetch_lords_committee_memberships(from_date=np.NaN,
-                                      to_date=np.NaN,
-                                      on_date=np.NaN,
+def fetch_lords_committee_memberships(from_date=np.nan,
+                                      to_date=np.nan,
+                                      on_date=np.nan,
                                       while_lord=True):
 
     """Fetch committee memberships for all Lords.
@@ -551,25 +551,25 @@ def fetch_lords_committee_memberships(from_date=np.NaN,
     The filtering is inclusive: a membership is returned if any part of it
     falls within the period specified with the from and to dates.
 
-    Note that a membership with a NaN end date is still open.
+    Note that a membership with a nan end date is still open.
 
     Parameters
     ----------
 
-    from_date : str or date or NaN, optional
+    from_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is numpy.NaN, which means no records are excluded on the
+        default value is numpy.nan, which means no records are excluded on the
         basis of the from_date.
-    to_date : str or date or NaN, optional
+    to_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is np.NaN, which means no records are excluded on the
+        default value is np.nan, which means no records are excluded on the
         basis of the to_date.
-    on_date : str or date or NaN, optional
+    on_date : str or date or nan, optional
         A string or datetime.date representing a date. If a string is used it
         should specify the date in ISO 8601 date format e.g. '2000-12-31'. The
-        default value is np.NaN, which means no records are excluded on the
+        default value is np.nan, which means no records are excluded on the
         basis of the on_date.
     while_lord : bool, optional
         A boolean indicating whether to filter the committee memberships to
